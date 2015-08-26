@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Нова пропозиція</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top fw700">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img alt="SoftServe" class="logo" src="img/logo.png">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Потреби</a></li>
+                            <li><a href="#">Пропозиції</a></li>
+                            <li><a href="#">Додати Потребу</a></li>
+                            <li><a href="#">Додати Пропозицію</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <hr class="divider hidden-lg hidden-md hidden-sm">
+                            </li>
+                            <li><a href="../navbar/">Про нас</a></li>
+                            <li><a href="../navbar-static-top/">Мій кабінет</a></li>
+                            <li><a href="#">Вийти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- New offer, first step -->
+        <section>
+            <div class="container">
+                <h2 class="text-left text-heading">Нова пропозиція</h2>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-1" for="title">Назва</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="heading" id="title" placeholder="Назва пропозиції">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-1">Категорія</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="category_name" placeholder="Оберіть категорію" data-toggle="modal" data-target="#categoriesModal">
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="categoriesModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Оберіть категорію:</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="category">
+                                        <!-- Main categories -->
+                                        <ul class="list-unstyled" role="tablist">
+                                            <li><a href="#">Одяг</a></li>
+                                            <li><a href="#">Взуття</a></li>
+                                            <li><a href="#">Аксесуари</a></li>
+                                            <li><a href="#">Канцтовари</a></li>
+                                            <li><a href="#">Книги</a></li>
+                                            <li><a href="#">Побутова техніка</a></li>
+                                            <li><a href="#">Електроніка</a></li>
+                                            <li><a href="#">Побут</a></li>
+                                            <li><a href="#">Засоби гігієни</a></li>
+                                            <li><a href="#">Іграшки</a></li>
+                                            <li><a href="#">Продукти</a></li>
+                                            <li><a href="#">Медикаменти</a></li>
+                                            <li><a href="#">Спорт</a></li>
+                                            <li><a href="#">Інструменти</a></li>
+                                            <li><a href="#">Матеріали</a></li>
+                                            <li><a href="#">Послуги</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hidden subcategory">
+                                        <!-- Sub-categories, hidden, should be displayed after main category is selected -->
+                                        <ul class="list-unstyled" role="tablist">
+                                            <li><a href="#">Дитячий одяг</a></li>
+                                            <li><a href="#">Жіночий одяг</a></li>
+                                            <li><a href="#">Чоловічий одяг</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hidden subcategory_child">
+                                        <!-- Sub-categories, hidden, should be displayed after main category is selected -->
+                                        <ul class="list-unstyled" role="tablist">
+                                            <li><a href="#">Верхній одяг</a></li>
+                                            <li><a href="#">Светри</a></li>
+                                            <li><a href="#">Штани</a></li>
+                                            <li><a href="#">Футболки</a></li>
+                                            <li><a href="#">Білизна</a></li>
+                                            <li><a href="#">Для немовлят</a></li>
+                                            <li><a href="#">Інше</a></li>
+                                        </ul>
+                                    </div>
+                                </div>  
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group pull-right">
+                        <button type="button" class="btn btn-warning">Назад</button>
+                        <button type="submit" class="btn btn-primary">Далі</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- New need, the end of section -->
+        <footer>
+            <nav id="footer" class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container">
+                    <p class="navbar-text text-center">© SoftServe LTD, 2010-2014, 0 800 60 3000 (10.00 – 19.00 Пн.-Пт.
+                        <a href="#">Контакти</a>
+                        <a href="#">Site Map</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms Of Use</a>
+                    </p>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>
