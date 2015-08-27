@@ -14,10 +14,6 @@ body > section {
 .dropButtons {
 	width: 90px;
 }
-.input-group {
-	width: 40%;
-	float: right;
-}
 
 .logo {
     position: relative;
@@ -54,6 +50,19 @@ body > section {
 }
 .secondaryNavigation li.topRow a {
     color: #000000;
+}
+.marginBottom {
+    margin-bottom: 5px;
+}
+.marginTop {
+    display: block;
+    height: 45px;
+}
+.fontWeight {
+    font-weight: bold;
+}
+.fontWeight.collapsed {
+     font-weight: normal;   
 }
 /*secondaryNavigation end*/
 @media (max-width:720px) {
