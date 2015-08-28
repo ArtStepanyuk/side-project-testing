@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Профіль</title>
+        <title>Опубліковані потреби</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -29,7 +29,16 @@
                         <ul class="nav navbar-nav">
                             <li><a href="#">Потреби</a></li>
                             <li><a href="#">Пропозиції</a></li>
-                            <li><a href="#">Додати Потребу</a></li>
+                            <li class="dropdown">
+                                <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    Додати Потребу
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">додати одну потребу</a></li>
+                                    <li><a href="#">додати проект</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Додати Пропозицію</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -55,7 +64,7 @@
                             <a href="#">Підтримані потреби</a>
                         </li>
                         <li class="topRow">
-                            <a href="#">Опобліковані пропозиції</a>
+                            <a href="#" class="currneLink">Опобліковані пропозиції</a>
                         </li>
                         <li class="topRow">
                             <a href="#">Підтримані пропозиції</a>
@@ -64,7 +73,7 @@
                             <a href="#">Повідомлення</a>
                         </li>
                         <li class="topRow">
-                            <a href="#" class="currneLink">Профіль</a>
+                            <a href="#">Профіль</a>
                         </li>
                     </ul>
                 </div>
@@ -72,31 +81,45 @@
             <div class="row">
                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2">
                     <div class="container">
-                        <h2 class="col-xs-2 col-sm-2 col-md-2 col-lg-2">Профіль</h2>
-                        <h2><button type="button" id="profileEdit" class="btn btn-default btn-md">Редагувати</button></h2>
-                    </div>  
-                      
+                        <h2>Опобліковані пропозиції</h2>
+                        <form role="form">
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio" checked>Потреби
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio">Проекти
+                            </label>
+                        </form>
+                    </div>                
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2">
                     <div class="container">
+                        <div class="status">
+                            <span><a href="#" class="currneLink">Активні</a></span>
+                            <span><a href="#">Завершені</a></span>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2">
+                    <div class="container">
+                        <div class="date">
+                            <div class="dateCreating">10/07/2015</div>
+                            <div class="row">
+                                <div class="activeNeed col-xs-2 col-sm-2 col-md-2 col-lg-2">Кольорові олівці</div>
+                                <div class="user_name col-xs-2 col-sm-2 col-md-2 col-lg-2">Катя Єдинорог</div>
+                                <div class="user_committed_date col-xs-2 col-sm-2 col-md-2 col-lg-2">(10/07/2015)</div>
+                            </div>
+                        </div>                       
+                        <div class="check">
+                            <span><a href="#">Переглянути</a></span>
+                            <span><a href="#">Редагувати</a></span>
+                            <span><a href="#">Закрити</a></span>
+                        </div>
                         <hr>
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <span>Ваше ім&#180;я  {{user.name}}</span><br><hr>
-                                <span>Електронна пошта: {{user.email}}</span><br><hr>
-                                <span>Телефон: {{user.phone}}</span><br><hr>
-                                <span>Хто Ви:  {{user.status}}</span><br><hr>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <span>Підтримані потреби  {{user.supportedNeeds}}</span><br><hr>
-                                <span>Опобліковані Пропозиції {{user.offers}}</span><br><hr>
-                                <span>Опобліковані Потреби  {{user.needs}}</span><br><hr>
-                                <span>Підтримані Пропозиції  {{user.supportedOffers}}</span><br><hr>
-                            </div>
-                        </div>  
-                        <hr>                 
                     </div>
                 </div>
             </div>

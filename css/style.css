@@ -58,6 +58,9 @@ body > section {
     display: block;
     height: 45px;
 }
+.marginRight {
+    margin-right: 5px;
+}
 .fontWeight {
     font-weight: bold;
 }
